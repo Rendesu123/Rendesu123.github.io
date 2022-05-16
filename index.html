@@ -19,11 +19,30 @@
            h1{color: red;}
          }
     </style>
+    <script type="text/javascript">
+    function nekokawaii(){
+      alert("猫かわいい");
+    };
+    function neko(){
+      var a = document.getElementById('calc1')
+      var b = document.getElementById('calc2')
+      var result =parseInt(a.value) + parseInt(b.value)
+      alert("結果" + result);
+    }
+
+    </script>
   </head>
   <body>
     <h1>猫画像集</h1>
-    <a href="https://pixabay.com/ja/images/search/%E7%8C%AB/">
+      <a href="https://pixabay.com/ja/images/search/%E7%8C%AB/">
     <img src="./neko.jpg"></a>
+    <p onclick="nekokawaii();">neko neko!!</p>
+
+    <input id="calc1" type="text" name="" value=""><br>
+    <input id="calc2" type="text" name="" value="">
+    <button onclick="neko()" type="button" name="button">計算</button>
+
+
     <h2>こんにちは！</h2>
     <em>猫は</em><strong>可愛い</strong>です。
     <ul>
