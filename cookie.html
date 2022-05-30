@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
     <meta charset="utf-8">
-    <title></title>
+    <head>
     <style media="screen">
       img{
-        height:50%;
-        width:50%;
+        width:450px;
     }
+    .container{display: flex;}
+     .item1{flex-grow:2;}
+     .item2{flex-grow:5;}
+     img{
+       transition: transform .4s ease;
+     }
+     img:hover{transform: scale(1.2);}
+     li{border:1px solid #333;}
     </style>
   </head>
   <body>
@@ -50,14 +56,20 @@
      }
 
     </script>
+    <div class="container">
+    <div class="item1">
   クッキー<p id="result"></p>枚<br>
-    <img onclick="cookieClick(1)" src="cookie.jpeg")>
+    <img onclick="cookieClick(1)" src="cookie.jpeg">
+  </div>
+  <div class="item2">
     <ul>
       <li onclick="karsol();">カーソル</li>
       <li onclick="grandma();">グランマ</li>
       <li onclick="farm();">ファーム</li>
       <li onclick="main();">マイン</li>
     </ul>
+  </div>
+</div>
   </body>
 
 
