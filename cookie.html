@@ -2,6 +2,10 @@
 <html lang="en" dir="ltr">
     <meta charset="utf-8">
     <head>
+      <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+ />
     <style media="screen">
       img{
         width:450px;
@@ -9,10 +13,10 @@
     .container{display: flex;}
      .item1{flex-grow:2;}
      .item2{flex-grow:5;}
-     img{
+    /* img{
        transition: transform .4s ease;
      }
-     img:hover{transform: scale(1.2);}
+     img:hover{transform: scale(1.2);}*/
      li{border:1px solid #333;}
     </style>
   </head>
@@ -34,6 +38,10 @@
        element.textContent=result;
      }
       function cookieClick(num){
+      var img_element = document.getElementById('cookie_img');
+        img_element.classList.remove("animate__animated","animate__bounce");
+        void img_element.offsetWidth;
+      img_element.classList.add("animate__animated","animate__bounce");
         result=result+num;
 
       }
@@ -59,7 +67,7 @@
     <div class="container">
     <div class="item1">
   クッキー<p id="result"></p>枚<br>
-    <img onclick="cookieClick(1)" src="cookie.jpeg">
+    <img id="cookie_img"onclick="cookieClick(1)" src="cookie.jpeg">
   </div>
   <div class="item2">
     <ul>
